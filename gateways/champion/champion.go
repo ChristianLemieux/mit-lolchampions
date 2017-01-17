@@ -19,27 +19,32 @@ func GetChampion(id string) *objects.Champion {
 	return rowToChampion(rows)
 }
 
-func GetAllChampions() *objects.Champion {
+func GetAllChampions() []*objects.Champion {
 	e := data.GetQueryEngine()
 	rows, err := e.Query("select * from champions", nil)
+	champions := make([]*objects.Champion, 0)
 
 	if err != nil {
 		log.Printf("There was an issue fetching the list of champions: %q", err)
 		return nil
 	}
 	defer rows.Close()
-	return rowToChampion(rows)
+
+	for rows.Next() {
+		champions = append(champions, scanChampion(rows))
+	}
+	return champions
 }
 
 func rowToChampion(row *sql.Rows) *objects.Champion {
 	if row.Next() {
-		return scanMovie(row)
+		return scanChampion(row)
 	}
 	return nil
 }
 
 // Convert a SQL row object into a champion object
-func scanMovie(row *sql.Rows) *objects.Champion {
+func scanChampion(row *sql.Rows) *objects.Champion {
 	champion := new(objects.Champion)
 	err := row.Scan(
 		&champion.Id,

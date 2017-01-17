@@ -32,7 +32,7 @@ func GetQueryEngine() *queryEngine {
 
 func (q queryEngine) getDb() *sql.DB {
 	db, err := sql.Open("sqlite3", "./champions.db")
-	log.Printf("Opening connection to movies database")
+	log.Printf("Opening connection to champions database")
 
 	if err != nil {
 		log.Fatal("Could not open connection to DB: %q", err)

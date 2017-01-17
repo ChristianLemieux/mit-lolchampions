@@ -1,12 +1,14 @@
 package handlers
 
 import (
+	"../gateways/champion"
 	"log"
 	"net/http"
 )
 
 func Home(rw http.ResponseWriter, rq *http.Request) {
 	log.Println("Executing the home handler")
-	var empty map[string]interface{}
-	sendResponse(rw, rq, "home", empty)
+	briefChampionData := make(map[string]interface{})
+	briefChampionData["champions"] = champion.GetAllChampions()
+	sendResponse(rw, rq, "home", briefChampionData)
 }

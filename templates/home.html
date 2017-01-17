@@ -1,5 +1,14 @@
 
-<h1> Look Up a Movie </h1>
+<h1> Select a Champion </h1>
 
-
-<input class="typeahead" type="text" placeholder="Movie Title">
+<div class="container">
+    <div class="row">
+		{{ range .champions}}
+		<div class="col-md-1" style="padding-left:0px;padding-right:0px;">
+			<a href="/champion/{{ .Id}}">
+				<img src="/img/{{ .Image}}" style="height:100px;width:100px;">
+			</a>
+        </div>
+        {{end}}
+    </div>
+</div>
