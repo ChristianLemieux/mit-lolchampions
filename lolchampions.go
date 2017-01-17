@@ -10,9 +10,7 @@ func main() {
 
 	// Handle all of the dynamic pages
 	http.HandleFunc("/", handlers.Home)
-	http.HandleFunc("/movie/", handlers.Movie)
-	http.HandleFunc("/movie/list.json", handlers.MovieJson)
-	http.HandleFunc("/voter/", handlers.Voter)
+	http.HandleFunc("/champion/", handlers.Champion)
 
 	// Delegate statick requests to http.FileServer. All of those
 	// requests will look inside the /static folder

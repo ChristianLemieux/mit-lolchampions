@@ -38,7 +38,7 @@ func rowToChampion(row *sql.Rows) *objects.Champion {
 	return nil
 }
 
-// Convert a SQL row object into a movie object
+// Convert a SQL row object into a champion object
 func scanMovie(row *sql.Rows) *objects.Champion {
 	champion := new(objects.Champion)
 	err := row.Scan(
@@ -51,11 +51,11 @@ func scanMovie(row *sql.Rows) *objects.Champion {
 		&champion.Magic,
 		&champion.Difficulty,
 		&champion.Image,
-		&champion.Tag
+		&champion.Tag,
 	)
 	if err != nil {
 		log.Printf("There was an issue scanning the champion results: %q", err)
 		return nil
 	}
-	return movie
+	return champion
 }
