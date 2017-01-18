@@ -75,3 +75,11 @@ body {
 .purple {
 	color: purple;
 }
+
+#filter-container {
+	padding-top:15px;
+}
+
+#filter-container button {
+	margin:5px;
+}

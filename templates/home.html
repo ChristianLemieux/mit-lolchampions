@@ -1,10 +1,15 @@
-
-<h1 class="header-title"> Select a Champion </h1>
-
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3">
+			<h1 class="header-title"> Select a Champion </h1>
+		</div>
+		<div id="filter-container" class="col-sm-9"></div>
+	</div>
+</div>
 <div class="container">
     <div class="row">
 		{{ range .champions}}
-		<div class="col-md-1 champion no-lr-padding">
+		<div class="col-md-1 champion no-lr-padding {{ .Tag}}">
 			<a href="/champion/{{ .Id}}">
 				<img src="/img/{{ .Image}}" class="small-profile-img" title="{{ .Name}}">
 			</a>
