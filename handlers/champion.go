@@ -13,6 +13,7 @@ func Champion(rw http.ResponseWriter, rq *http.Request) {
 	// parts. There are libraries that do a better job of this,
 	// but if you are doing something really basic, this is fine
 	pathParts := strings.Split(rq.URL.Path, "/")
+
 	pathPartCount := len(pathParts)
 	if pathPartCount < 3 {
 		// Convenient...
@@ -25,10 +26,10 @@ func Champion(rw http.ResponseWriter, rq *http.Request) {
 		http.NotFound(rw, rq)
 		return
 	}
+
 	// Fetch all the data and prepare it for transformation with
 	// the templates.
 	championData := make(map[string]interface{})
 	championData["champion"] = currentChampion
-
 	sendResponse(rw, rq, "champion", championData)
 }

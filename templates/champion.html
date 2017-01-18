@@ -1,0 +1,42 @@
+<div class="container layout-container">
+	<div class="row champion-container">
+		<div class="col-sm-12">
+			<div class="row pad_t_20">
+				<div class="col-sm-2">
+					<img src="/img/{{ .champion.Image}}" />
+				</div>
+				<div class="col-sm-8">
+					<div class="row">
+						<div class="col-sm-12">
+							<h1 style="margin:0;">{{ .champion.Name}}</h1>
+						</div>
+					</div>
+					<div class="row pad_t_10">
+						<div class="col-sm-12">
+							<h3 style="margin:0;">{{ .champion.Title}}</h3>
+						</div>
+					</div>
+					<div class="row pad_t_20">
+						<div class="col-sm-12">
+							{{ .champion.Blurb}}
+						</div>
+					</div>
+					<div class="row pad_t_20">
+						<div class="col-sm-3">
+							Attack: {{ .champion.Attack}}
+						</div>
+						<div class="col-sm-3">
+							Defense: {{ .champion.Defense}}
+						</div>
+						<div class="col-sm-3">
+							Magic: {{ .champion.Magic}}
+						</div>
+						<div class="col-sm-3">
+							Difficulty: {{ .champion.Difficulty}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
