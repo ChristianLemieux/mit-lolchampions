@@ -4,10 +4,11 @@
 <div class="container">
     <div class="row">
 		{{ range .champions}}
-		<div class="col-md-1" style="padding-left:0px;padding-right:0px;">
+		<div class="col-md-1 champion" style="padding-left:0px;padding-right:0px;">
 			<a href="/champion/{{ .Id}}">
 				<img src="/img/{{ .Image}}" style="height:100px;width:100px;">
 			</a>
+			<input type="hidden" class="tag" value="{{ .Tag}}"/>
         </div>
         {{end}}
     </div>
