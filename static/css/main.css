@@ -17,3 +17,13 @@
   border-radius: 6px;
   box-shadow: 0px 2px 10px 2px grey;
 }
+
+.small-profile-img {
+	width:100px;
+	height:100px;
+}
+
+.no-lr-padding {
+	padding-left:0px;
+	padding-right:0px;
+}

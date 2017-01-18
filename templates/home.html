@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row">
 		{{ range .champions}}
-		<div class="col-md-1 champion" style="padding-left:0px;padding-right:0px;">
+		<div class="col-md-1 champion no-lr-padding">
 			<a href="/champion/{{ .Id}}">
-				<img src="/img/{{ .Image}}" style="height:100px;width:100px;">
+				<img src="/img/{{ .Image}}" class="small-profile-img">
 			</a>
 			<input type="hidden" class="tag" value="{{ .Tag}}"/>
         </div>
