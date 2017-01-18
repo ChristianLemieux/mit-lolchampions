@@ -6,7 +6,7 @@
 		{{ range .champions}}
 		<div class="col-md-1 champion no-lr-padding">
 			<a href="/champion/{{ .Id}}">
-				<img src="/img/{{ .Image}}" class="small-profile-img">
+				<img src="/img/{{ .Image}}" class="small-profile-img" title="{{ .Name}}">
 			</a>
 			<input type="hidden" class="tag" value="{{ .Tag}}"/>
         </div>

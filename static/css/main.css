@@ -1,5 +1,6 @@
 body {
 	background-color:#424242;
+	font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
@@ -52,4 +53,25 @@ body {
 
 .back-button-text:hover {
 	color:#eeeeee;
+}
+
+.font-16 {
+	font-size:16px;
+	font-weight:bold;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.blue {
+	color: blue;
+}
+
+.purple {
+	color: purple;
 }
