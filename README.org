@@ -48,8 +48,8 @@ requests.
 
 *** Objects
 The objects folder contains all the structs that are passed around in
-this application. Because this is a basic application there are only
-two: movies and voters.
+this application. Because this is a basic application there is only one:
+champion
 
 In a more complicated application, there are a lot of global structs
 so it's nice to have they grouped together.
