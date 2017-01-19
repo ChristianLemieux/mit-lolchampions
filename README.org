@@ -1,4 +1,4 @@
-#+TITLE: LoL Champions
+#+TITLE: League Champions
 #+DATE:
 #+AUTHOR: Christian Lemieux, Sam Skinner
 #+EMAIL: clemieux@nextjump.com
@@ -73,8 +73,7 @@ particular handler.
 ** Front End Frameworks
 
 - [[http://jquery.com/][jQuery]]
-- [[http://getbootstrap.com/][Boostrap]]
-- [[https://twitter.github.io/typeahead.js/][typeahead.js]]
+- [[http://getbootstrap.com/][Bootstrap]]
 
 ** Building and Running
 
